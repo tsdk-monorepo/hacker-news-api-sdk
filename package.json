@@ -5,6 +5,6 @@
   "private": true,
   "scripts": {
     "ready": "pnpm --filter=api sync-sdk",
-    "start-publish": "cd hn-api-sdk && npm publish --access public --no-git-checks --provenance --registry=https://registry.npmjs.org"
+    "start-publish": "cp override/* hn-api-sdk/ && cd hn-api-sdk && npm publish --access public --no-git-checks --provenance --registry=https://registry.npmjs.org"
   }
 }

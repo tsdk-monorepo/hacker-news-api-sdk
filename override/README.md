@@ -83,31 +83,3 @@ GetUserDetail({ id: "jl" }).then((res) => {
   console.log(res.id, res.about, res.submitted);
 });
 ```
-
-## Development
-
-First, install dependencies:
-
-> Recommend use `pnpm`
-
-```sh
-pnpm install
-pnpm run ready
-```
-
-Then, sync `hn-api-sdk` packakge files:
-
-```sh
-pnpm --filter=api sync-sdk
-```
-
-Publish to npm
-
-```sh
-pnpm --filter=hn-api-sdk start-publish
-```
-
-### Thanks
-
-- https://transform.tools/json-to-typescript
-- https://tsdk.dev

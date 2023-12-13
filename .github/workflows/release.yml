@@ -45,7 +45,6 @@ jobs:
       - name: Sync nl-api-sdk
         run: pnpm --filter=api sync-sdk
 
-
       - name: Release
         run: pnpm start-publish
         env:
