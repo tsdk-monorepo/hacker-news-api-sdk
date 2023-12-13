@@ -25,7 +25,9 @@ Usage (2 steps):
 
 Step 1, create `./user-api.ts` and `./user-api-hooks.ts`:
 
-```ts user-api.ts
+Create `user-api.ts`
+
+```ts
 import axios, { AxiosError } from "axios";
 import { setHandler, setAxiosInstance, axiosHandler } from "hn-api-sdk";
 
@@ -64,6 +66,15 @@ setAxiosInstance(axiosInstance);
 setHandler(axiosHandler);
 ```
 
+Create `user-api-hooks.ts`
+
+```ts user-api-hooks.ts
+import "./user-api";
+
+export * from "hn-api-sdk/lib/user-api-hooks";
+```
+
+Step 2, import module from `./user-api.ts`:
 
 ```ts
 import { GetUserDetail } from "./user-api";
@@ -72,15 +83,6 @@ GetUserDetail({ id: "jl" }).then((res) => {
   console.log(res.id, res.about, res.submitted);
 });
 ```
-
-```ts user-api-hooks.ts
-import './user-api';
-
-export * from 'hn-api-sdk/lib/user-api-hooks';
-```
-
-
-Step 2, import module from `./user-api.ts`:
 
 ## Development
 
@@ -98,7 +100,6 @@ Then, sync `hn-api-sdk` packakge files:
 ```sh
 pnpm --filter=api sync-sdk
 ```
-
 
 Publish to npm
 
