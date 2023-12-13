@@ -1,8 +1,9 @@
 {
-  "name": "tsdk-quickstart",
+  "name": "tsdk-hackernews-api",
+  "description": "HackerNews API with TypeScript",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "ready": "pnpm --filter=server sync-sdk"
+    "ready": "pnpm --filter=api sync-sdk"
   }
 }

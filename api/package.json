@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sync-sdk": "pnpm tsdk --sync",
+    "checktype": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.22.4",
+    "change-case": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "tsdk": "0.0.29",
+    "typescript": "^5.2.2"
+  }
+}

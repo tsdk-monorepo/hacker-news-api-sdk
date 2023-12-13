@@ -1,7 +1,7 @@
 /** @type {import('tsdk').TSDKConfig} */
 module.exports = {
   packageDir: "../",
-  packageName: "fe-sdk",
+  packageName: "hn-api-sdk",
   baseDir: "./src",
   entityLibName: ["typeorm"],
   entityExt: "entity",
