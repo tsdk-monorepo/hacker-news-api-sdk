@@ -131,4 +131,5 @@ dist
 
 dist*
 build*
-hn-api-sdk
+hn-api-sdk/*
+!hn-api-sdk/package.json

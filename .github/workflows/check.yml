@@ -26,4 +26,7 @@ jobs:
         run: pnpm --filter=api checktype
 
       - name: Sync nl-api-sdk
-        run: pnpm pnpm --filter=api sync-sdk
+        run: pnpm --filter=api sync-sdk
+
+      - name: Run tests
+        run: pnpm i && pnpm test
