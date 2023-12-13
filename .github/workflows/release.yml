@@ -40,10 +40,10 @@ jobs:
         run: pnpm install
 
       - name: Check types
-      - run: pnpm --filter=api checktype
+        run: pnpm --filter=api checktype
 
       - name: Sync nl-api-sdk
-      - run: pnpm --filter=api sync-sdk
+        run: pnpm --filter=api sync-sdk
 
 
       - name: Release
