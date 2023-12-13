@@ -107,7 +107,12 @@ Publish to npm
 pnpm --filter=hn-api-sdk start-publish
 ```
 
+### Npm package
+
+https://www.npmjs.com/package/hn-api-sdk
+
 ### Thanks
 
 - https://transform.tools/json-to-typescript
+- https://github.com/HackerNews/API
 - https://tsdk.dev
