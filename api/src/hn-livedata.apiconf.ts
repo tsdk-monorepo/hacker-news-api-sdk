@@ -7,7 +7,7 @@ import { APIConfig } from "@/src/shared/tsdk-helper";
 export const GetMaxItemIdConfig: APIConfig = {
   type: "user",
   method: "get",
-  path: "/v0/maxitem",
+  path: "/v0/maxitem.json",
   description: "Get the current largest item id.",
   category: "live data",
 };
