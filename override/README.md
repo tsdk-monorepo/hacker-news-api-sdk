@@ -77,7 +77,18 @@ export * from "hn-api-sdk/lib/user-api-hooks";
 Step 2, import module from `./user-api.ts`:
 
 ```ts
-import { GetUserDetail } from "./user-api";
+import {
+  GetUserDetail,
+  GetStories,
+  GetStory,
+  GetComment,
+  GetAsk,
+  GetJob,
+  GetPoll,
+  GetPart,
+  GetMaxItemId,
+  GetChangedItemsAndProfiles,
+} from "./user-api";
 
 GetUserDetail({ id: "jl" }).then((res) => {
   console.log(res.id, res.about, res.submitted);
