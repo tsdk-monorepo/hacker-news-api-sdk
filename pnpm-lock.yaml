@@ -21,8 +21,8 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: 0.0.29
-        version: 0.0.29
+        specifier: 0.0.30
+        version: 0.0.30
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -1256,8 +1256,8 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /tsdk@0.0.29:
-    resolution: {integrity: sha512-VneuLUPLByILscudbH5uac7Y438qLH/9Z94e1BVDvHG5vunDkJFb0V2FkThYzBtTJKkbmEX0tzI8gR/bdBy3fA==}
+  /tsdk@0.0.30:
+    resolution: {integrity: sha512-ibYDC82oBXePU6DgfipW4FqYdk8hZcoO8HqSodEe3swtU3j7RDF7W5fWcqYuXSmaMiP6sMjoaUqbum1ZijVftA==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
