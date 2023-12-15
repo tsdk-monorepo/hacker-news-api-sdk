@@ -25,7 +25,7 @@ export type GetMaxItemIdRes = number;
 // --------- GetMaxItemId END ---------
 
 /**
- * Up to 200-500 stories, include `new/top/best/ask/show/job` stories ({@link APIConfig})
+ * Up to 200-500 stories, query `new/top/best/ask/show/job` stories ({@link APIConfig})
  * @category live data
  */
 export const GetStoriesConfig: APIConfig = {
@@ -33,7 +33,7 @@ export const GetStoriesConfig: APIConfig = {
   method: "get",
   path: `/v0/{type}stories.json`,
   description:
-    "Up to 200-500 stories, include `new/top/best/ask/show/job` stories",
+    "Up to 200-500 stories, query `new/top/best/ask/show/job` stories",
   category: "live data",
   paramsInUrl: '{}'
 };
