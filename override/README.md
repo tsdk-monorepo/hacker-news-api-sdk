@@ -9,9 +9,9 @@ https://github.com/HackerNews/API
 - TypeScript types
 - Support SWR hooks
 
-## Documentation
+## Source code
 
-https://hn-api-sdk.tsdk.dev
+https://github.com/tsdk-monorepo/hacker-news-api-sdk
 
 ## Getting Started
 
