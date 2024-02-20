@@ -21,8 +21,8 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: ^0.1.5
-        version: 0.1.5
+        specifier: ^0.1.7
+        version: 0.1.7
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -42,8 +42,8 @@ importers:
         specifier: ^2.2.5
         version: 2.2.5(react@18.2.0)
       xior:
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.5
+        version: 0.0.5
       zod:
         specifier: ^3
         version: 3.22.4
@@ -67,8 +67,8 @@ importers:
         specifier: workspace:*
         version: link:../hn-api-sdk
       xior:
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.5
+        version: 0.0.5
     devDependencies:
       '@types/node':
         specifier: ^20.9.0
@@ -1267,8 +1267,8 @@ packages:
     engines: {node: '>=14.13.1'}
     dev: false
 
-  /tsdk@0.1.5:
-    resolution: {integrity: sha512-OMYDu6UPumeKxI7a3hhf5kQMXJb4s3uDIdyDVBmjYMmEqwfXjZ0T9eY1jJT6DOI+p39znBmMsxo2TMeT0R2IdA==}
+  /tsdk@0.1.7:
+    resolution: {integrity: sha512-cf75QCYmSJKIfsRSRUf5PupZ57DdtxHun+cEl+/TYCcdFOm06Z46k5f8xNztS7ixZrnJqUW/1YhS7sHq5RZvfg==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -1490,8 +1490,8 @@ packages:
         optional: true
     dev: false
 
-  /xior@0.0.3:
-    resolution: {integrity: sha512-5w3Gm0z7wHKYJZ5NWKavUzluhLrw+EVk8W1rGboAEED/daBx2sldiEB5Dquoruyj1bDy+G2PNaJOvdbhdphNnA==}
+  /xior@0.0.5:
+    resolution: {integrity: sha512-isvDHa1PV30Qb+pJOlcsyxC8weqP6iZLAbJPeTug+JhMR15EFvM7BTuh/YZU0m6OsL9istpfp+zhHJSdOVLAnA==}
     dependencies:
       ts-deepmerge: 7.0.0
     dev: false

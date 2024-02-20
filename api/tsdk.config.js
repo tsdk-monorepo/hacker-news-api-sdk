@@ -9,10 +9,11 @@ module.exports = {
   shareExt: "shared",
   sharedDirs: ["./src/shared"],
   removeFields: [],
+  httpLib: 'xior',
   monorepoRoot: "../",
   dataHookLib: "SWR",
   dependencies: {
     axios: "^1.6.7",
-    xior: "^0.0.3",
+    xior: "^0.0.5",
   },
 };
