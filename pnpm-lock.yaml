@@ -21,8 +21,8 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: 0.0.32
-        version: 0.0.32
+        specifier: ^0.1.5
+        version: 0.1.5
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -30,17 +30,20 @@ importers:
   hn-api-sdk:
     dependencies:
       axios:
-        specifier: 1.6.2
-        version: 1.6.2
+        specifier: ^1.6.7
+        version: 1.6.7
       change-case:
         specifier: ^4.1.2
         version: 4.1.2
       socket.io-client:
-        specifier: ^4.7.2
-        version: 4.7.2
+        specifier: ^4.7.4
+        version: 4.7.4
       swr:
-        specifier: ^2.2.4
-        version: 2.2.4(react@18.2.0)
+        specifier: ^2.2.5
+        version: 2.2.5(react@18.2.0)
+      xior:
+        specifier: ^0.0.3
+        version: 0.0.3
       zod:
         specifier: ^3
         version: 3.22.4
@@ -58,11 +61,14 @@ importers:
   tests:
     dependencies:
       axios:
-        specifier: ^1.6.2
-        version: 1.6.2
+        specifier: ^1.6.7
+        version: 1.6.7
       hn-api-sdk:
         specifier: workspace:*
         version: link:../hn-api-sdk
+      xior:
+        specifier: ^0.0.3
+        version: 0.0.3
     devDependencies:
       '@types/node':
         specifier: ^20.9.0
@@ -501,10 +507,10 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /axios@1.6.2:
-    resolution: {integrity: sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==}
+  /axios@1.6.7:
+    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
     dependencies:
-      follow-redirects: 1.15.3
+      follow-redirects: 1.15.5
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -754,8 +760,8 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /follow-redirects@1.15.3:
-    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
+  /follow-redirects@1.15.5:
+    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -1170,8 +1176,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /socket.io-client@4.7.2:
-    resolution: {integrity: sha512-vtA0uD4ibrYD793SOIAwlo8cj6haOeMHrGvwPxJsxH7CeIksqJ+3Zc06RvWTIFgiSqx4A3sOnTXpfAEE2Zyz6w==}
+  /socket.io-client@4.7.4:
+    resolution: {integrity: sha512-wh+OkeF0rAVCrABWQBaEjLfb7DVPotMbu0cgWgyR0v6eA4EoVnAwcIeIbcdTE3GT/H3kbdLl7OoH2+asoDRIIg==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
@@ -1225,8 +1231,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /swr@2.2.4(react@18.2.0):
-    resolution: {integrity: sha512-njiZ/4RiIhoOlAaLYDqwz5qH/KZXVilRLvomrx83HjzCWTfa+InyfAjv05PSFxnmLzZkNO9ZfvgoqzAaEI4sGQ==}
+  /swr@2.2.5(react@18.2.0):
+    resolution: {integrity: sha512-QtxqyclFeAsxEUeZIYmsaQ0UjimSq1RZ9Un7I68/0ClKK/U3LoyQunwkQfJZr2fc22DfIXLNDc2wFyTEikCUpg==}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -1256,8 +1262,13 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /tsdk@0.0.32:
-    resolution: {integrity: sha512-WIJ0rcqZhUtKMTKSwYkwebwlWp9UOkT4K/CPSrcFwzYz7JiNvGmEcqbifb4McDQMTcrjrfluO1cgxkIlks3YFg==}
+  /ts-deepmerge@7.0.0:
+    resolution: {integrity: sha512-WZ/iAJrKDhdINv1WG6KZIGHrZDar6VfhftG1QJFpVbOYZMYJLJOvZOo1amictRXVdBXZIgBHKswMTXzElngprA==}
+    engines: {node: '>=14.13.1'}
+    dev: false
+
+  /tsdk@0.1.5:
+    resolution: {integrity: sha512-OMYDu6UPumeKxI7a3hhf5kQMXJb4s3uDIdyDVBmjYMmEqwfXjZ0T9eY1jJT6DOI+p39znBmMsxo2TMeT0R2IdA==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -1477,6 +1488,12 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dev: false
+
+  /xior@0.0.3:
+    resolution: {integrity: sha512-5w3Gm0z7wHKYJZ5NWKavUzluhLrw+EVk8W1rGboAEED/daBx2sldiEB5Dquoruyj1bDy+G2PNaJOvdbhdphNnA==}
+    dependencies:
+      ts-deepmerge: 7.0.0
     dev: false
 
   /xmlhttprequest-ssl@2.0.0:

@@ -1,5 +1,5 @@
-import xior, { XiorError } from "xior";
-import { setHandler, setXiorInstance, xiorHandler } from "hn-api-sdk";
+import axios, { AxiosError } from "axios";
+import { setHandler, setAxiosInstance, axiosHandler } from "hn-api-sdk";
 
 export * from "hn-api-sdk/lib/user-api";
 export * from "hn-api-sdk/lib/apiconf-refs";
@@ -9,12 +9,12 @@ export const baseURL = `https://hacker-news.firebaseio.com`;
 
 const apiURL = baseURL;
 
-const xiorInstance = xior.create({
+const axiosInstance = axios.create({
   baseURL: apiURL,
   headers: {},
 });
 
-xiorInstance.interceptors.request.use(
+axiosInstance.interceptors.request.use(
   (config) => {
     return config;
   },
@@ -23,14 +23,14 @@ xiorInstance.interceptors.request.use(
   }
 );
 
-xiorInstance.interceptors.response.use(
+axiosInstance.interceptors.response.use(
   async (response) => {
     return response;
   },
-  async (error: XiorError) => {
+  async (error: AxiosError) => {
     return Promise.reject(error?.message);
   }
 );
 
-setXiorInstance(xiorInstance);
-setHandler(xiorHandler);
+setAxiosInstance(axiosInstance);
+setHandler(axiosHandler);

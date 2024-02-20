@@ -25,7 +25,46 @@ Usage (2 steps):
 
 Step 1, create `./user-api.ts` and `./user-api-hooks.ts`:
 
-Create `user-api.ts`
+Create `user-api.ts` (use fetch)
+
+```ts
+import xior, { XiorError } from "xior";
+import { setHandler, setXiorInstance, xiorHandler } from "hn-api-sdk";
+
+export * from "hn-api-sdk/lib/user-api";
+export * from "hn-api-sdk/lib/apiconf-refs";
+export * from "hn-api-sdk/lib/shared-refs";
+
+export const baseURL = `https://hacker-news.firebaseio.com`;
+
+const xiorInstance = xior.create({
+  baseURL,
+  headers: {},
+});
+
+xiorInstance.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+xiorInstance.interceptors.response.use(
+  async (response) => {
+    return response;
+  },
+  async (error: XiorError) => {
+    return Promise.reject(error?.message);
+  }
+);
+
+setXiorInstance(xiorInstance);
+setHandler(xiorHandler);
+```
+
+Or use axios as the client, create `user-api.ts`:
 
 ```ts
 import axios, { AxiosError } from "axios";
@@ -37,10 +76,8 @@ export * from "hn-api-sdk/lib/shared-refs";
 
 export const baseURL = `https://hacker-news.firebaseio.com`;
 
-const apiURL = baseURL;
-
 const axiosInstance = axios.create({
-  baseURL: apiURL,
+  baseURL,
   headers: {},
 });
 
