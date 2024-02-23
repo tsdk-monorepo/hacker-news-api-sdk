@@ -21,10 +21,10 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: ^0.1.7
-        version: 0.1.7
+        specifier: ^0.1.8
+        version: 0.1.8
       typescript:
-        specifier: ^5.2.2
+        specifier: ^5
         version: 5.2.2
 
   hn-api-sdk:
@@ -74,7 +74,7 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       typescript:
-        specifier: ^5.2.2
+        specifier: ^5
         version: 5.2.2
       vitest:
         specifier: ^1.0.4
@@ -1267,8 +1267,8 @@ packages:
     engines: {node: '>=14.13.1'}
     dev: false
 
-  /tsdk@0.1.7:
-    resolution: {integrity: sha512-cf75QCYmSJKIfsRSRUf5PupZ57DdtxHun+cEl+/TYCcdFOm06Z46k5f8xNztS7ixZrnJqUW/1YhS7sHq5RZvfg==}
+  /tsdk@0.1.8:
+    resolution: {integrity: sha512-I5WzRThsKXRtUpdILhWpxLVEKmwgRuqTwE9KUrOglJDdDD/v80J9FDUD0qzsXNvn0NdS9y2mwZkZUFwvG5UbrQ==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
