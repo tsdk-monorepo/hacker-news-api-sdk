@@ -21,8 +21,8 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: ^0.1.8
-        version: 0.1.8
+        specifier: ^0.1.9
+        version: 0.1.9
       typescript:
         specifier: ^5
         version: 5.2.2
@@ -42,8 +42,8 @@ importers:
         specifier: ^2.2.5
         version: 2.2.5(react@18.2.0)
       xior:
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.7
+        version: 0.0.7
       zod:
         specifier: ^3
         version: 3.22.4
@@ -67,8 +67,8 @@ importers:
         specifier: workspace:*
         version: link:../hn-api-sdk
       xior:
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.7
+        version: 0.0.7
     devDependencies:
       '@types/node':
         specifier: ^20.9.0
@@ -1241,6 +1241,11 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
+  /tiny-lru@11.2.5:
+    resolution: {integrity: sha512-JpqM0K33lG6iQGKiigcwuURAKZlq6rHXfrgeL4/I8/REoyJTGU+tEMszvT/oTRVHG2OiylhGDjqPp1jWMlr3bw==}
+    engines: {node: '>=12'}
+    dev: false
+
   /tinybench@2.5.1:
     resolution: {integrity: sha512-65NKvSuAVDP/n4CqH+a9w2kTlLReS9vhsAP06MWx+/89nMinJyB2icyl58RIcqCmIggpojIGeuJGhjU1aGMBSg==}
     dev: true
@@ -1267,8 +1272,8 @@ packages:
     engines: {node: '>=14.13.1'}
     dev: false
 
-  /tsdk@0.1.8:
-    resolution: {integrity: sha512-I5WzRThsKXRtUpdILhWpxLVEKmwgRuqTwE9KUrOglJDdDD/v80J9FDUD0qzsXNvn0NdS9y2mwZkZUFwvG5UbrQ==}
+  /tsdk@0.1.9:
+    resolution: {integrity: sha512-tme+qnutRtl/4nZQSphnCaI3ufKRgUnzyA1rx7uJcgDkBWbHJfgdodnMpt+g8XBCN81ETNR+nWm5+SSlitnLPA==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -1490,9 +1495,10 @@ packages:
         optional: true
     dev: false
 
-  /xior@0.0.5:
-    resolution: {integrity: sha512-isvDHa1PV30Qb+pJOlcsyxC8weqP6iZLAbJPeTug+JhMR15EFvM7BTuh/YZU0m6OsL9istpfp+zhHJSdOVLAnA==}
+  /xior@0.0.7:
+    resolution: {integrity: sha512-WO9ZdL2QTqoZHqCtt5AJvAswpYHRpNt5y+62tpVfpiIEa9nASceW+W0m+cr7u9uNyt0UFJ1gRPo3mmD3ebDPog==}
     dependencies:
+      tiny-lru: 11.2.5
       ts-deepmerge: 7.0.0
     dev: false
 
