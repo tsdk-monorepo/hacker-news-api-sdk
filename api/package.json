@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
-    "tsdk": "^0.1.9",
+    "tsdk": "^0.1.10",
     "typescript": "^5"
   }
 }

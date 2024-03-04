@@ -21,8 +21,8 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: ^0.1.9
-        version: 0.1.9
+        specifier: ^0.1.10
+        version: 0.1.10
       typescript:
         specifier: ^5
         version: 5.2.2
@@ -42,8 +42,8 @@ importers:
         specifier: ^2.2.5
         version: 2.2.5(react@18.2.0)
       xior:
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.1.1
+        version: 0.1.1
       zod:
         specifier: ^3
         version: 3.22.4
@@ -67,8 +67,8 @@ importers:
         specifier: workspace:*
         version: link:../hn-api-sdk
       xior:
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.1.1
+        version: 0.1.1
     devDependencies:
       '@types/node':
         specifier: ^20.9.0
@@ -1272,8 +1272,8 @@ packages:
     engines: {node: '>=14.13.1'}
     dev: false
 
-  /tsdk@0.1.9:
-    resolution: {integrity: sha512-tme+qnutRtl/4nZQSphnCaI3ufKRgUnzyA1rx7uJcgDkBWbHJfgdodnMpt+g8XBCN81ETNR+nWm5+SSlitnLPA==}
+  /tsdk@0.1.10:
+    resolution: {integrity: sha512-CUOi8daeNqEzfU+FQQnvw7eaflt0R+900c1qPk+a/tgcjP4GYcsAt2gDkApwzBGbRrSJK/mDkuhZw9rmDq7UMw==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -1495,8 +1495,8 @@ packages:
         optional: true
     dev: false
 
-  /xior@0.0.7:
-    resolution: {integrity: sha512-WO9ZdL2QTqoZHqCtt5AJvAswpYHRpNt5y+62tpVfpiIEa9nASceW+W0m+cr7u9uNyt0UFJ1gRPo3mmD3ebDPog==}
+  /xior@0.1.1:
+    resolution: {integrity: sha512-GZwWfZ7DoZpNMsUCRaKJKAPgBcfLx8/IJM9NOlFJVF87PPRHHjLhhblWOOOxyLPgC3NJkT+fFHzxYlQlGbCbhw==}
     dependencies:
       tiny-lru: 11.2.5
       ts-deepmerge: 7.0.0
