@@ -14,6 +14,6 @@ module.exports = {
   dataHookLib: "SWR",
   dependencies: {
     axios: "^1.6.7",
-    xior: "^0.1.1",
+    xior: "^0.3.0",
   },
 };

@@ -21,8 +21,8 @@ importers:
         specifier: ^20.9.0
         version: 20.9.0
       tsdk:
-        specifier: ^0.1.10
-        version: 0.1.10
+        specifier: ^0.1.12
+        version: 0.1.12
       typescript:
         specifier: ^5
         version: 5.2.2
@@ -36,14 +36,14 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2
       socket.io-client:
-        specifier: ^4.7.4
-        version: 4.7.4
+        specifier: ^4.7.5
+        version: 4.7.5
       swr:
         specifier: ^2.2.5
         version: 2.2.5(react@18.2.0)
       xior:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.3.0
+        version: 0.3.0
       zod:
         specifier: ^3
         version: 3.22.4
@@ -67,8 +67,8 @@ importers:
         specifier: workspace:*
         version: link:../hn-api-sdk
       xior:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.3.0
+        version: 0.3.0
     devDependencies:
       '@types/node':
         specifier: ^20.9.0
@@ -1176,8 +1176,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /socket.io-client@4.7.4:
-    resolution: {integrity: sha512-wh+OkeF0rAVCrABWQBaEjLfb7DVPotMbu0cgWgyR0v6eA4EoVnAwcIeIbcdTE3GT/H3kbdLl7OoH2+asoDRIIg==}
+  /socket.io-client@4.7.5:
+    resolution: {integrity: sha512-sJ/tqHOCe7Z50JCBCXrsY3I2k03iOiUe+tj1OmKeD2lXPiGH/RUCdTZFoqVyN7l1MnpIzPrGtLcijffmeouNlQ==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
@@ -1272,8 +1272,8 @@ packages:
     engines: {node: '>=14.13.1'}
     dev: false
 
-  /tsdk@0.1.10:
-    resolution: {integrity: sha512-CUOi8daeNqEzfU+FQQnvw7eaflt0R+900c1qPk+a/tgcjP4GYcsAt2gDkApwzBGbRrSJK/mDkuhZw9rmDq7UMw==}
+  /tsdk@0.1.12:
+    resolution: {integrity: sha512-aO2xnWrDQ4O099JJCZoqPS9i2EcpMKi9cB9hp80cw51IbCvD6JvKIw6i6RwjM23jSaCwjZN/HeaRzQtw8JFIwQ==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -1495,8 +1495,8 @@ packages:
         optional: true
     dev: false
 
-  /xior@0.1.1:
-    resolution: {integrity: sha512-GZwWfZ7DoZpNMsUCRaKJKAPgBcfLx8/IJM9NOlFJVF87PPRHHjLhhblWOOOxyLPgC3NJkT+fFHzxYlQlGbCbhw==}
+  /xior@0.3.0:
+    resolution: {integrity: sha512-3sQ66R7l+TlseSaiuh6Xrh46g5gNe+SgB5O27tkykzMOo0xvRXK2BmY08h/+JNm4/ZpJkME4nhvGZuBMnsTSaw==}
     dependencies:
       tiny-lru: 11.2.5
       ts-deepmerge: 7.0.0
