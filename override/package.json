@@ -19,17 +19,17 @@
   },
   "dependencies": {
     "zod": "^3",
-    "xior": "^0.3.0",
+    "xior": "^0.5.5",
     "change-case": "^4.1.2",
     "swr": "^2.2.5"
   },
   "devDependencies": {
     "typescript": "^5",
-    "typedoc": "^0.25.2",
-    "@tsconfig/recommended": "^1.0.3"
+    "typedoc": "^0.26.6",
+    "@tsconfig/recommended": "^1.0.7"
   },
   "peerDependencies": {
-    "socket.io-client": "^4.7.2"
+    "socket.io-client": "^4.7.5"
   },
   "peerDependenciesMeta": {
     "socket.io-client": {
