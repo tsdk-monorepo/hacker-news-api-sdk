@@ -11,12 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "zod": "^3.23.8",
+    "zod": "^3.24.2",
     "change-case": "^4.1.2"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
-    "tsdk": "^0.2.0",
+    "tsdk": "^0.3.0",
     "typescript": "^5"
   }
 }

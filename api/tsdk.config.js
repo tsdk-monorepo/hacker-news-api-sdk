@@ -13,8 +13,11 @@ module.exports = {
   monorepoRoot: "../",
   dataHookLib: "SWR",
   dependencies: {
-    axios: "^1.7.2",
-    xior: "^0.5.5",
-    zod: "^3.23.8",
+    axios: "^1.7.9",
+    xior: "^0.6.3",
+    zod: "^3.24.2",
   },
+  scripts: {
+    "tsc:build": "rm -rf node_modules && tsc --project tsconfig.json",
+  }
 };
