@@ -8,8 +8,6 @@ export const GetMaxItemIdConfig: APIConfig = {
   type: "user",
   method: "get",
   path: "/v0/maxitem.json",
-  description: "Get the current largest item id.",
-  category: "live data",
 };
 /**
  *
@@ -32,10 +30,7 @@ export const GetStoriesConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/{type}stories.json`,
-  description:
-    "Up to 200-500 stories, query `new/top/best/ask/show/job` stories",
-  category: "live data",
-  paramsInUrl: '{}'
+  paramsInUrl: "{}",
 };
 /**
  *
@@ -52,18 +47,14 @@ export type GetStoriesReq = {
 export type GetStoriesRes = number[];
 // --------- GetStories END ---------
 
-
-
 /**
  * Changed Items and Profiles ({@link APIConfig})
  * @category live data
  */
 export const GetChangedItemsAndProfilesConfig: APIConfig = {
-  type: 'user',
-  method: 'get',
-  path: '/v0/updates.json',
-  description: 'Changed Items and Profiles',
-  category: 'live data',
+  type: "user",
+  method: "get",
+  path: "/v0/updates.json",
 };
 /**
  *

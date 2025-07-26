@@ -11,13 +11,13 @@ module.exports = {
   removeFields: [],
   httpLib: "xior",
   monorepoRoot: "../",
-  dataHookLib: "SWR",
+  dataHookLib: ['SWR', 'ReactQuery', 'VueQuery', 'SolidQuery', 'SvelteQuery'],
   dependencies: {
-    axios: "^1.7.9",
-    xior: "^0.6.3",
-    zod: "^3.24.2",
+    axios: "^1.8.4",
+    xior: "^0.7.8",
+    zod: "^3.25.67",
   },
   scripts: {
-    "tsc:build": "rm -rf node_modules && tsc --project tsconfig.json",
+    "tsc:build": "tsc --project tsconfig.json",
   }
 };

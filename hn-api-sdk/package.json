@@ -1,26 +1,34 @@
 {
   "name": "hn-api-sdk",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "require": "./lib/index.js",
   "scripts": {
-    "tsc:build": "rm -rf node_modules && tsc --project tsconfig.json",
-    "doc:build": "typedoc src/**.ts --plugin ./hover.mjs && node write-popover.mjs",
+    "tsc:build": "tsc --project tsconfig.json",
+    "tsc:build:cjs": "tsc --project tsconfig.json",
+    "tsc:build:esm": "tsc --project tsconfig.esm.json",
+    "doc:build": "typedoc --customJs popover.js src/**.ts",
     "serve": "serve docs"
   },
   "dependencies": {
-    "zod": "^3.24.2",
-    "axios": "^1.7.9",
-    "xior": "^0.6.3",
-    "change-case": "^4.1.2",
-    "swr": "^2.3.0"
+    "axios": "^1.8.4",
+    "xior": "^0.7.8",
+    "zod": "^3.25.67",
+    "swr": "^2.3.3",
+    "@tanstack/react-query": "^5.74.3",
+    "@tanstack/vue-query": "^5.74.3",
+    "@tanstack/solid-query": "^5.74.3",
+    "@tanstack/svelte-query": "^5.74.3"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "typedoc": "^0.27.6",
-    "@tsconfig/recommended": "^1.0.8"
+    "typescript": "^5.8.3",
+    "typedoc": "^0.28.2",
+    "concurrently": "^9.1.2",
+    "@standard-schema/spec": "^1.0.0"
   },
   "peerDependencies": {
-    "socket.io-client": "^4.8.0"
+    "socket.io-client": "^4.8.1"
   },
   "peerDependenciesMeta": {
     "socket.io-client": {
@@ -29,6 +37,7 @@
   },
   "files": [
     "lib",
+    "esm",
     "src"
   ]
 }

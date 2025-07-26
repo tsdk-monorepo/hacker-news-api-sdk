@@ -1,4 +1,5 @@
-import { z } from 'zod';
+// @ts-ignore
+import type { StandardSchemaV1 } from '@standard-schema/spec';
 
 export const APITypes = {
   user: 'user',
@@ -9,35 +10,36 @@ export const APITypes = {
 export const APITypesKey = Object.keys(APITypes).filter((item) => item !== APITypes.common);
 
 export type APIType = keyof typeof APITypes;
-
 export interface APIConfig {
-  /** The API type. Like: user side or admin side. */
-  type: APIType;
-  /** The API path */
+  /** The API type, such as user-side or admin-side. Default is `user`. */
+  type?: APIType;
+  /** The API path. */
   path: string;
+  /** The HTTP method. */
   method: 'get' | 'post' | 'delete' | 'put' | 'patch' | 'head' | 'options';
-  /** Request data validate scheme */
-  schema?: z.ZodTypeAny;
-  /** The API need auth? Default is false */
+  /** Request data validation schema. */
+  schema?: StandardSchemaV1;
+  /** Does the API require authentication? Default is `false`. */
   needAuth?: boolean;
-  /** The API disabled? Default is false */
+  /** Is the API disabled? Default is `false`. */
   disabled?: boolean;
-  /** The API description */
-  description: string;
-  /** The API category */
-  category?: string;
-
-  /** custom headers for client */
+  /** Custom headers for the client. */
   headers?: { [key: string]: any };
   /**
-   * is params in url? for generate API sdk base documentation.
-   * default undefined,
-   * if `:`, will support `/api/:a/b/:c`,
-   * if `{}`, will support `/api/{a}/b/{c}`,
-   * and will replace with data with {a: 1, c: 2} to `/api/1/b/2`  */
+   * Are parameters included in the URL? Used for generating API SDK-based documentation.
+   * Default is `undefined`.
+   * - If `':'`, supports `/api/:a/b/:c`.
+   * - If `'{}'`, supports `/api/{a}/b/{c}`.
+   * Parameters will be replaced with data, e.g., `{ a: 1, c: 2 }` → `/api/1/b/2`.
+   */
   paramsInUrl?: ':' | '{}';
-  /** Force the API is fetch data, for sometimes the backend API is all `post` method */
+  /** Force the API to be treated as a data-fetching request,
+   * useful when backend APIs use `POST` for all requests. */
   isGet?: boolean;
+  /** Hook to process data before sending the request. */
+  onRequest?<T = any>(data: T): T | Promise<T>;
+  /** Hook to process data after receiving the response. */
+  onResponse?<T = any>(response: T): T | Promise<T>;
 }
 
 export interface ObjectLiteral {

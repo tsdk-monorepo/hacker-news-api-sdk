@@ -8,8 +8,6 @@ export const GetStoryConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/item/{id}.json`,
-  description: "Get story detail",
-  category: "items",
   paramsInUrl: "{}",
 };
 /**
@@ -54,8 +52,6 @@ export const GetCommentConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/item/{id}.json`,
-  description: "Get commend detail",
-  category: "items",
   paramsInUrl: "{}",
 };
 /**
@@ -98,8 +94,6 @@ export const GetAskConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/item/{id}.json`,
-  description: "Get ask detail",
-  category: "items",
   paramsInUrl: "{}",
 };
 /**
@@ -144,8 +138,6 @@ export const GetJobConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/item/{id}.json`,
-  description: "Get job detail",
-  category: "items",
   paramsInUrl: "{}",
 };
 /**
@@ -188,8 +180,6 @@ export const GetPollConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/item/{id}.json`,
-  description: "Get poll detail",
-  category: "items",
   paramsInUrl: "{}",
 };
 /**
@@ -238,8 +228,6 @@ export const GetPartConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/item/{id}.json`,
-  description: "Get part detail",
-  category: "items",
   paramsInUrl: "{}",
 };
 /**

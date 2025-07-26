@@ -1,15 +1,9 @@
-import { paramCase } from 'change-case';
-
-import { ObjectLiteral } from './tsdk-types';
-
 export * from './tsdk-types';
 
 export const hasBodyMethods: { [key: string]: boolean | undefined } = {
   post: true,
   put: true,
   patch: true,
-  delete: true,
-  options: true,
 };
 
 export function checkMethodHasBody(method: string) {
@@ -18,6 +12,13 @@ export function checkMethodHasBody(method: string) {
 
 export function transformPath(path: string) {
   return `/${paramCase(path)}`;
+}
+export function paramCase(input: string): string {
+  return input
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2') // Add a hyphen between lower and upper case letters
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2') // Add a hyphen between consecutive capitals when followed by lowercase
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .toLowerCase(); // Convert all characters to lowercase
 }
 
 export function isObject<T = any>(data: T) {
@@ -29,25 +30,6 @@ export function isObject<T = any>(data: T) {
     Object.keys(data).length > 0;
   return result;
 }
-
-/**
- * remove undefined field or trim string value
- *
- * @param data - the object data
- */
-export const trimAndRemoveUndefined = (data: ObjectLiteral): ObjectLiteral => {
-  if (!isObject(data)) return data;
-  const newData: ObjectLiteral = {};
-  Object.keys(data).forEach((k: string) => {
-    const valueType = typeof data[k];
-    if (valueType === 'string') {
-      newData[k] = data[k].trim();
-    } else if (valueType !== 'undefined') {
-      newData[k] = data[k];
-    }
-  });
-  return newData;
-};
 
 export const ProtocolTypes = {
   request: 'REQ:',

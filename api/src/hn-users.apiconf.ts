@@ -8,8 +8,6 @@ export const GetUserDetailConfig: APIConfig = {
   type: "user",
   method: "get",
   path: `/v0/user/{id}.json`,
-  description: "Query user detail",
-  category: "users",
   paramsInUrl: '{}'
 };
 /**
